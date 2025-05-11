@@ -89,7 +89,7 @@ const TerminalHeader: React.FC<TerminalHeaderProps> = ({
             <Text>
               ● OpenAI <Text bold>Codex</Text>{" "}
               <Text dimColor>
-                (research preview) <Text color="blueBright">v{version}</Text>
+                [steipete fork] <Text color="blueBright">v{version}</Text>
               </Text>
             </Text>
           </Box>

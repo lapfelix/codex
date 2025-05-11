@@ -99,7 +99,7 @@ impl HistoryCell {
             Line::from(vec![
                 "OpenAI ".into(),
                 "Codex".bold(),
-                " (research preview)".dim(),
+                " [steipete fork]".dim(),
             ]),
             Line::from(""),
             Line::from("codex session:".magenta().bold()),
