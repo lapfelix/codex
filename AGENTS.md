@@ -10,7 +10,9 @@ This is a customized fork of the OpenAI Codex CLI with the following key modific
 
 3. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-4. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
+4. **Enabled Unsafe Mode**: Added the `CODEX_UNSAFE_ALLOW_NO_SANDBOX=1` environment variable to completely bypass sandboxing for maximum flexibility.
+
+5. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
 
 ## Installation
 
