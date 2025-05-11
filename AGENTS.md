@@ -1,4 +1,28 @@
-# Rust/codex-rs
+# Steipete's Codex Fork
+
+This is a customized fork of the OpenAI Codex CLI with the following key modifications:
+
+## Changes
+
+1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
+
+2. **Increased Default Timeout**: Command timeout increased from 10 seconds to 20 seconds to allow longer-running commands to complete.
+
+3. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
+
+## Installation
+
+To use this fork without affecting your regular Codex installation:
+
+1. The fork is installed as `scodex` in `~/.local/bin` which takes precedence over Homebrew binaries in the PATH.
+
+2. Usage:
+   - `codex` - Uses the original OpenAI version (from npm/Homebrew)
+   - `scodex` - Uses this customized fork with Seatbelt disabled and increased timeouts
+
+## Original Documentation
+
+### Rust/codex-rs
 
 In the codex-rs folder where the rust code lives:
 
