@@ -27,7 +27,34 @@ To use this fork without affecting your regular Codex installation:
 
 2. Usage:
    - `codex` - Uses the original OpenAI version (from npm/Homebrew)
-   - `scodex` - Uses this customized fork with Seatbelt disabled and increased timeouts
+   - `scodex` - Uses this customized fork with all enhancements enabled
+
+## Configuration
+
+This fork comes with the following suggested configurations:
+
+### Environment Variables (~/.codex.env)
+
+```bash
+# Allow running without a sandbox (dangerous but powerful)
+CODEX_UNSAFE_ALLOW_NO_SANDBOX=1
+```
+
+### Configuration File (~/.codex/config.json)
+
+```json
+{
+  "model": "o4-mini",
+  "approvalMode": "full-auto",
+  "tools": {
+    "shell": {
+      "maxBytes": 102400,
+      "maxLines": 1000
+    }
+  },
+  "notify": true
+}
+```
 
 ## Original Documentation
 
