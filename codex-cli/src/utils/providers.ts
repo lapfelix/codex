@@ -19,7 +19,7 @@ export const providers: Record<
   },
   gemini: {
     name: "Gemini",
-    baseURL: "https://generativelanguage.googleapis.com/v1beta/models",
+    baseURL: "https://generativelanguage.googleapis.com/v1",
     envKey: "GEMINI_API_KEY",
   },
   ollama: {
