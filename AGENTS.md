@@ -2,6 +2,8 @@
 
 This is a customized fork of the OpenAI Codex CLI with the following key modifications:
 
+> **⚠️ Use at your own risk. This is the true YOLO version of Codex. ⚠️**
+
 ## Changes
 
 1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
