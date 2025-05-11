@@ -756,11 +756,10 @@ export class AgentLoop {
         for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
           try {
             let reasoning: Reasoning | undefined;
-            if (this.model.startsWith("o")) {
-              reasoning = { effort: this.config.reasoningEffort ?? "high" };
-              if (this.model === "o3" || this.model === "o4-mini") {
-                reasoning.summary = "auto";
-              }
+            // Enable reasoning for all models in steipete fork
+            reasoning = { effort: this.config.reasoningEffort ?? "high" };
+            if (this.model === "o3" || this.model === "o4-mini") {
+              reasoning.summary = "auto";
             }
             const mergedInstructions = [prefix, this.instructions]
               .filter(Boolean)
@@ -1142,11 +1141,10 @@ export class AgentLoop {
 
               // Re‑create the stream with the *same* parameters.
               let reasoning: Reasoning | undefined;
-              if (this.model.startsWith("o")) {
-                reasoning = { effort: "high" };
-                if (this.model === "o3" || this.model === "o4-mini") {
-                  reasoning.summary = "auto";
-                }
+              // Enable reasoning for all models in steipete fork
+              reasoning = { effort: this.config.reasoningEffort ?? "high" };
+              if (this.model === "o3" || this.model === "o4-mini") {
+                reasoning.summary = "auto";
               }
 
               const mergedInstructions = [prefix, this.instructions]

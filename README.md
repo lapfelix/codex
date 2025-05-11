@@ -64,17 +64,43 @@
 
 This fork includes the following powerful enhancements:
 
-1. **Disabled Apple Seatbelt on macOS** ([ec1f148](https://github.com/steipete/codex/commit/ec1f1484afd637e8328764186328345245d25d34)): Sandboxing has been completely disabled to avoid permission issues with file access.
+1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
 
-2. **Added Network Access** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
+2. **Added Network Access** ([366fcb8](https://github.com/steipete/codex/commit/366fcb82c4aa3e39ac75477562ae80bde5d07d90)): Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-3. **Enabled Unsafe Mode** ([8b56c5f](https://github.com/steipete/codex/commit/8b56c5f32126e60f49570336487f44867d9a86e4)): Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
+3. **Enabled Unsafe Mode**: Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
 
 4. **Increased Shell Output Limits** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Expanded the shell command outputs to 100KB and 1,000 lines (10x/4x more than default).
 
 5. **Fixed Gemini API URL** ([931d232](https://github.com/steipete/codex/commit/931d232f10e0bf7bfc7ee62fa6ee2d5b15a9c3c1)): Updated the Gemini API endpoint to use the correct `/v1beta/models` path.
 
+6. **Set Gemini as Default Model**: Changed the default model to `gemini-2.5-pro-exp-03-25` with reasoning capabilities enabled at "high" effort level.
+
+7. **Enabled Thinking for All Models**: Modified the agent loop to enable reasoning/thinking for all models, not just OpenAI's models.
+
+8. **Full-Auto by Default**: Changed the default approval mode to `full-auto` for maximum convenience.
+
 ## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/steipete/codex.git
+cd codex/codex-cli
+
+# Install dependencies
+npm install
+
+# Build
+npm run build
+
+# Install locally
+npm install -g .
+
+# Optional: Create an alias for convenience
+mkdir -p ~/.local/bin
+echo '#!/bin/bash\ncodex "$@"' > ~/.local/bin/scodex
+chmod +x ~/.local/bin/scodex
+```
 
 Use `scodex` from `~/.local/bin` to access the enhanced version while keeping your regular Codex installation intact.
 

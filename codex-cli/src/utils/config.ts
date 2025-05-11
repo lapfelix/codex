@@ -43,9 +43,9 @@ if (!isVitest) {
   loadDotenv({ path: USER_WIDE_CONFIG_PATH });
 }
 
-export const DEFAULT_AGENTIC_MODEL = "o4-mini";
+export const DEFAULT_AGENTIC_MODEL = "gemini-2.5-pro-exp-03-25";
 export const DEFAULT_FULL_CONTEXT_MODEL = "gpt-4.1";
-export const DEFAULT_APPROVAL_MODE = AutoApprovalMode.SUGGEST;
+export const DEFAULT_APPROVAL_MODE = AutoApprovalMode.FULL_AUTO;
 export const DEFAULT_INSTRUCTIONS = "";
 
 // Default shell output limits
@@ -429,7 +429,7 @@ export const loadConfig = (
       (options.isFullContext
         ? DEFAULT_FULL_CONTEXT_MODEL
         : DEFAULT_AGENTIC_MODEL),
-    provider: storedConfig.provider,
+    provider: storedConfig.provider ?? "gemini",
     instructions: combinedInstructions,
     notify: storedConfig.notify === true,
     approvalMode: storedConfig.approvalMode,
@@ -442,7 +442,7 @@ export const loadConfig = (
       },
     },
     disableResponseStorage: storedConfig.disableResponseStorage === true,
-    reasoningEffort: storedConfig.reasoningEffort,
+    reasoningEffort: storedConfig.reasoningEffort ?? "high",
   };
 
   // -----------------------------------------------------------------------
