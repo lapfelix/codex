@@ -80,7 +80,14 @@ pub async fn process_exec_tool_call(
 ) -> Result<ExecToolCallOutput> {
     let start = Instant::now();
 
-    let raw_output_result = match sandbox_type {
+    // Always use None for Mac to bypass Seatbelt
+    let sandbox_type_to_use = if cfg!(target_os = "macos") {
+        SandboxType::None
+    } else {
+        sandbox_type
+    };
+
+    let raw_output_result = match sandbox_type_to_use {
         SandboxType::None => exec(params, sandbox_policy, ctrl_c).await,
         SandboxType::MacosSeatbelt => {
             let ExecParams {

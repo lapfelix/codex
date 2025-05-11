@@ -105,7 +105,8 @@ pub fn assess_command_safety(
 
 pub fn get_platform_sandbox() -> Option<SandboxType> {
     if cfg!(target_os = "macos") {
-        Some(SandboxType::MacosSeatbelt)
+        // Seatbelt disabled
+        None
     } else if cfg!(target_os = "linux") {
         Some(SandboxType::LinuxSeccomp)
     } else {
