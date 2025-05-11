@@ -12,7 +12,12 @@ This is a customized fork of the OpenAI Codex CLI with the following key modific
 
 4. **Enabled Unsafe Mode**: Added the `CODEX_UNSAFE_ALLOW_NO_SANDBOX=1` environment variable to completely bypass sandboxing for maximum flexibility.
 
-5. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
+5. **Increased Shell Output Limits**: Expanded the default limits for shell command output:
+
+   - Maximum bytes: 102,400 (100KB) - 10x more than default
+   - Maximum lines: 1,000 - 4x more than default
+
+6. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
 
 ## Installation
 
