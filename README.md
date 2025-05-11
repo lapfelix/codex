@@ -1,7 +1,9 @@
-<h1 align="center">OpenAI Codex CLI</h1>
+<h1 align="center">OpenAI Codex CLI (steipete fork)</h1>
 <p align="center">Lightweight coding agent that runs in your terminal</p>
 
 <p align="center"><code>npm i -g @openai/codex</code></p>
+
+<p align="center"><strong>⚠️ Use at your own risk. This is the true YOLO version of Codex. ⚠️</strong></p>
 
 ![Codex demo GIF using: codex "explain this codebase to me"](./.github/demo.gif)
 
@@ -57,6 +59,22 @@
 </details>
 
 ---
+
+## Steipete Fork Enhancements
+
+This fork includes the following powerful enhancements:
+
+1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
+
+2. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
+
+3. **Enabled Unsafe Mode**: Added the `CODEX_UNSAFE_ALLOW_NO_SANDBOX=1` environment variable to completely bypass sandboxing for maximum flexibility.
+
+4. **Increased Shell Output Limits**: Expanded the shell command outputs to 100KB and 1,000 lines (10x/4x more than default).
+
+## Installation
+
+Use `scodex` from `~/.local/bin` to access the enhanced version while keeping your regular Codex installation intact.
 
 ## Experimental technology disclaimer
 
@@ -408,7 +426,7 @@ Below is a comprehensive example of `config.json` with multiple custom providers
     },
     "gemini": {
       "name": "Gemini",
-      "baseURL": "https://generativelanguage.googleapis.com/v1beta/openai",
+      "baseURL": "https://generativelanguage.googleapis.com/v1beta/models",
       "envKey": "GEMINI_API_KEY"
     },
     "ollama": {
