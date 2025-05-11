@@ -1,4 +1,4 @@
-# Steipete's Codex Fork
+# @steipete's Codex Fork
 
 This is a customized fork of the OpenAI Codex CLI with the following key modifications:
 
@@ -6,20 +6,22 @@ This is a customized fork of the OpenAI Codex CLI with the following key modific
 
 ## Changes
 
-1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
+1. **Disabled Apple Seatbelt on macOS** ([ec1f148](https://github.com/steipete/codex/commit/ec1f1484afd637e8328764186328345245d25d34)): Sandboxing has been completely disabled to avoid permission issues with file access.
 
-2. **Increased Default Timeout**: Command timeout increased from 10 seconds to 20 seconds to allow longer-running commands to complete.
+2. **Increased Default Timeout** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Command timeout increased from 10 seconds to 20 seconds to allow longer-running commands to complete.
 
-3. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
+3. **Added Network Access** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-4. **Enabled Unsafe Mode**: Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
+4. **Enabled Unsafe Mode** ([8b56c5f](https://github.com/steipete/codex/commit/8b56c5f32126e60f49570336487f44867d9a86e4)): Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
 
-5. **Increased Shell Output Limits**: Expanded the default limits for shell command output:
+5. **Increased Shell Output Limits** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Expanded the default limits for shell command output:
 
    - Maximum bytes: 102,400 (100KB) - 10x more than default
    - Maximum lines: 1,000 - 4x more than default
 
-6. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
+6. **Fixed Gemini API URL** ([931d232](https://github.com/steipete/codex/commit/931d232f10e0bf7bfc7ee62fa6ee2d5b15a9c3c1)): Updated the Gemini API endpoint to use the correct `/v1beta/models` path.
+
+7. **Custom Branding**: Changed header from "(research preview)" to "[@steipete fork]" in UI elements.
 
 ## Installation
 

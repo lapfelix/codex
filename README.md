@@ -1,4 +1,4 @@
-<h1 align="center">OpenAI Codex CLI (steipete fork)</h1>
+<h1 align="center">OpenAI Codex CLI (@steipete fork)</h1>
 <p align="center">Lightweight coding agent that runs in your terminal</p>
 
 <p align="center"><code>npm i -g @openai/codex</code></p>
@@ -60,17 +60,19 @@
 
 ---
 
-## Steipete Fork Enhancements
+## @steipete fork enhancements
 
 This fork includes the following powerful enhancements:
 
-1. **Disabled Apple Seatbelt on macOS**: Sandboxing has been completely disabled to avoid permission issues with file access.
+1. **Disabled Apple Seatbelt on macOS** ([ec1f148](https://github.com/steipete/codex/commit/ec1f1484afd637e8328764186328345245d25d34)): Sandboxing has been completely disabled to avoid permission issues with file access.
 
-2. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
+2. **Added Network Access** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-3. **Enabled Unsafe Mode**: Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
+3. **Enabled Unsafe Mode** ([8b56c5f](https://github.com/steipete/codex/commit/8b56c5f32126e60f49570336487f44867d9a86e4)): Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
 
-4. **Increased Shell Output Limits**: Expanded the shell command outputs to 100KB and 1,000 lines (10x/4x more than default).
+4. **Increased Shell Output Limits** ([ed27fc6](https://github.com/steipete/codex/commit/ed27fc665397aa299cf352c9287f5ea8495e2ef3)): Expanded the shell command outputs to 100KB and 1,000 lines (10x/4x more than default).
+
+5. **Fixed Gemini API URL** ([931d232](https://github.com/steipete/codex/commit/931d232f10e0bf7bfc7ee62fa6ee2d5b15a9c3c1)): Updated the Gemini API endpoint to use the correct `/v1beta/models` path.
 
 ## Installation
 
