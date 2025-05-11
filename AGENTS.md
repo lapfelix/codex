@@ -12,7 +12,7 @@ This is a customized fork of the OpenAI Codex CLI with the following key modific
 
 3. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-4. **Enabled Unsafe Mode**: Added the `CODEX_UNSAFE_ALLOW_NO_SANDBOX=1` environment variable to completely bypass sandboxing for maximum flexibility.
+4. **Enabled Unsafe Mode**: Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
 
 5. **Increased Shell Output Limits**: Expanded the default limits for shell command output:
 
@@ -35,12 +35,9 @@ To use this fork without affecting your regular Codex installation:
 
 This fork comes with the following suggested configurations:
 
-### Environment Variables (~/.codex.env)
+### No Environment Variables Required
 
-```bash
-# Allow running without a sandbox (dangerous but powerful)
-CODEX_UNSAFE_ALLOW_NO_SANDBOX=1
-```
+Unlike the original Codex, this fork doesn't require any environment variables for the enhanced features to work - unsafe mode is hardcoded directly into the source.
 
 ### Configuration File (~/.codex/config.json)
 

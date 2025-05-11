@@ -68,7 +68,7 @@ This fork includes the following powerful enhancements:
 
 2. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
 
-3. **Enabled Unsafe Mode**: Added the `CODEX_UNSAFE_ALLOW_NO_SANDBOX=1` environment variable to completely bypass sandboxing for maximum flexibility.
+3. **Enabled Unsafe Mode**: Hardcoded `CODEX_UNSAFE_ALLOW_NO_SANDBOX=true` directly in the code to completely bypass sandboxing for maximum flexibility without requiring environment variables.
 
 4. **Increased Shell Output Limits**: Expanded the shell command outputs to 100KB and 1,000 lines (10x/4x more than default).
 
