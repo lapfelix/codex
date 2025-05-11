@@ -8,7 +8,9 @@ This is a customized fork of the OpenAI Codex CLI with the following key modific
 
 2. **Increased Default Timeout**: Command timeout increased from 10 seconds to 20 seconds to allow longer-running commands to complete.
 
-3. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
+3. **Added Network Access**: Modified the default sandbox policy to include network access, allowing commands to connect to the internet.
+
+4. **Custom Branding**: Changed header from "(research preview)" to "[steipete fork]" in UI elements.
 
 ## Installation
 
